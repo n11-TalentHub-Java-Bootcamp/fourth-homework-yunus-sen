@@ -21,18 +21,23 @@ public class DebtEntity extends BaseEntity{
     @Column(name = "last_date" , scale=2)
     private Double debtValue;
 
-    @Temporal(TemporalType.TIMESTAMP)
+    @Temporal(TemporalType.DATE)
     @Column(name = "vade_date")
     private Date vadeDate;
 
     @Enumerated(EnumType.STRING)
     private DebtType debtType;
 
-    @JoinColumn(name = "user_id")
+    @Column(name = "user_id")
+    private Long userId;
+    @Column(name = "parent_debt_id")
+    private Long parentDebtId;
+
+    /*@JoinColumn(name = "user_id")
     @ManyToOne(fetch = FetchType.LAZY)
     private UserEntity userDetails;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "parent_debt_id")
-    private DebtEntity parentDebt;
+    private DebtEntity parentDebt;*/
 }

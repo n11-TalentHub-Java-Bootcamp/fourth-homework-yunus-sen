@@ -19,8 +19,12 @@ public class CollectionEntity extends BaseEntity{
 
     private Double totalDebt;
 
-    @JoinColumn(name = "user_id")
+    @Column(name = "user_id")
+    private Long userId;
+
+
+    /*@JoinColumn(name = "user_id")
     @ManyToOne()
-    private UserEntity userDetails;
+    private UserEntity userDetails;*/
 }
 

@@ -27,10 +27,10 @@ public class UserController {
         return ResponseEntity.ok(userService.save(user));
     }
 
-    @PutMapping("/{id}")
+   /* @PutMapping("/{id}")
     public ResponseEntity<UserDto> getUSer(@PathVariable("id") Long id, @RequestBody UserDto user ){
         return ResponseEntity.ok(userService.update(user));
-    }
+    }*/
 
     @DeleteMapping ("/{id}")
     public ResponseEntity<Boolean> delete(@PathVariable("id") @NotNull Long id){
