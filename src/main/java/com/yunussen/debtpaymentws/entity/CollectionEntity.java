@@ -22,6 +22,9 @@ public class CollectionEntity extends BaseEntity{
     @Column(name = "user_id")
     private Long userId;
 
+    @Column(name = "debt_id")
+    private Long debtId;
+
 
     /*@JoinColumn(name = "user_id")
     @ManyToOne()
