@@ -13,4 +13,9 @@ public interface DebtService {
     List<DebtDto> getDebtByBetwenDates(Date date1, Date date2);
     List<DebtDto> getDebtEntitiesByUserId(Long userId);
     List<DebtDto> getDebtByOverdue();
+    Double getTotalNormalDebtByUserId(Long userId);
+    Double getTotalGecikmisDebtByUserId(Long userId);
+
+    Double getTotalDebtByOverdueAndUserId(Long userId);
+
 }

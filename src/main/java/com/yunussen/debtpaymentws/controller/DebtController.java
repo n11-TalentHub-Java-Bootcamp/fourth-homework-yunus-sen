@@ -43,6 +43,20 @@ public class DebtController {
         return ResponseEntity.ok(debtService.getDebtByOverdue());
     }
 
+    @GetMapping("normal-borc/{userId}")
+    public ResponseEntity<Double> getTotalNormalDebtByUserId(@PathVariable("userId") Long userId){
+        return ResponseEntity.ok(debtService.getTotalNormalDebtByUserId(userId));
+    }
+
+    @GetMapping("/overdue-debt-total/{userId}")
+    public ResponseEntity<Double> getTotalOverdueDebtByUserId(@PathVariable("userId") Long userId){
+        return ResponseEntity.ok(debtService.getTotalDebtByOverdueAndUserId(userId));
+    }
+
+    @GetMapping("gecikmis-borc/{userId}")
+    public ResponseEntity<Double> getTotalGecikmisDebtByUserId(@PathVariable("userId") Long userId){
+        return ResponseEntity.ok(debtService.getTotalGecikmisDebtByUserId(userId));
+    }
 
 
 }

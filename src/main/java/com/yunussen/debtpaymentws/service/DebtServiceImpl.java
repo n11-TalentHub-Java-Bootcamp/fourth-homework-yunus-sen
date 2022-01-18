@@ -57,4 +57,19 @@ public class DebtServiceImpl implements DebtService{
         });
         return returnValue;
     }
+
+    @Override
+    public Double getTotalNormalDebtByUserId(Long userId) {
+        return debtRepo.getTotalNormalDebtByUserId(userId);
+    }
+
+    @Override
+    public Double getTotalGecikmisDebtByUserId(Long userId) {
+        return debtRepo.getTotalGecikmisDebtByUserId(userId);
+    }
+
+    @Override
+    public Double getTotalDebtByOverdueAndUserId(Long userId) {
+        return debtRepo.getTotalDebtByOverdueAndUserId(new Date(),userId);
+    }
 }
